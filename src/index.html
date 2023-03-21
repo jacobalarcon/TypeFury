@@ -4,10 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./"
     <title>Home Page</title>
   </head>
   <body>
-    <div id="root"></div>
-    <p>hello</p>
+    <div id="root">hello</div>
+
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+    <script>
+      const App = () => {
+        return React.createElement(
+          'div',
+          {},
+          React.createElement('h1', {}, 'IdiotME!')
+        );
+      };
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(React.createElement(App));
+
+     
+    </script>
+
+    <!-- <p>hello</p> -->
   </body>
 </html>
