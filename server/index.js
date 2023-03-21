@@ -1,5 +1,5 @@
 const express = require('express');
-
+const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -9,9 +9,11 @@ app.listen(PORT, () => {
 });
 
 app.get('/api', (req, res) => {
-  res.json({ message: 'hello from the home page' });
+  return res.json({ message: 'hello from the u page' });
 });
 
 app.get('/home', (req, res) => {
-  res.json({ message: 'sent home file' });
+  return res
+    .status(200)
+    .sendFile(path.join(__dirname, '..', 'client', 'index.html'));
 });
