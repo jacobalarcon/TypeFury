@@ -4,15 +4,21 @@ import UserForm from './Login';
 class App extends Component {
   render() {
     const styles = {
-      backgroundColor: 'yellow',
+      backgroundColor: 'white',
       color: 'blue',
       fontSize: 24,
       padding: '10px',
     };
+
+    const centerStyle = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    };
     return (
-      <div>
+      <div style={centerStyle}>
         <h1 className="my-title" style={styles}>
-          Type I am Fury
+          TypeFury
         </h1>
         <UserForm />
       </div>
